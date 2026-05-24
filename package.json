@@ -1,0 +1,18 @@
+{
+  "name": "multi-use-course-allocater",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev:frontend": "npm --prefix frontend run dev -- --open",
+    "dev:api": "cd backend && uvicorn backend_api:app --reload --port 8000",
+    "dev:single": "cd \"DE COURSE ELECTIVE/course_allocation_system\" && set STREAMLIT_BROWSER_GATHER_USAGE_STATS=false && streamlit run app.py --server.headless=true --browser.gatherUsageStats=false",
+    "dev:dual": "cd DE2/dual_course_allocation && set STREAMLIT_BROWSER_GATHER_USAGE_STATS=false && streamlit run app/streamlit_app.py --server.port 8502 --server.headless=true --browser.gatherUsageStats=false",
+    "dev:chat:lifeskill": "cd addons/lifeskill_chatbot_service && python main.py",
+    "dev:chat:single": "cd addons/dept_chatbot_app && set STREAMLIT_BROWSER_GATHER_USAGE_STATS=false && streamlit run streamlit_chat.py --server.port 8511 --server.headless=true --browser.gatherUsageStats=false",
+    "dev:chat:dual": "cd addons/dual_chatbot_app && set STREAMLIT_BROWSER_GATHER_USAGE_STATS=false && streamlit run streamlit_chat.py --server.port 8512 --server.headless=true --browser.gatherUsageStats=false",
+    "dev:all": "concurrently -n frontend,api,streamlit,dual,chatapi,chatsingle,chatdual -c cyan,green,magenta,yellow,blue,white,gray \"npm --prefix frontend run dev -- --open\" \"cd backend && uvicorn backend_api:app --reload --port 8000\" \"cd \\\"DE COURSE ELECTIVE/course_allocation_system\\\" && set STREAMLIT_BROWSER_GATHER_USAGE_STATS=false && streamlit run app.py --server.headless=true --browser.gatherUsageStats=false\" \"cd DE2/dual_course_allocation && set STREAMLIT_BROWSER_GATHER_USAGE_STATS=false && streamlit run app/streamlit_app.py --server.port 8502 --server.headless=true --browser.gatherUsageStats=false\" \"cd addons/lifeskill_chatbot_service && python main.py\" \"cd addons/dept_chatbot_app && set STREAMLIT_BROWSER_GATHER_USAGE_STATS=false && streamlit run streamlit_chat.py --server.port 8511 --server.headless=true --browser.gatherUsageStats=false\" \"cd addons/dual_chatbot_app && set STREAMLIT_BROWSER_GATHER_USAGE_STATS=false && streamlit run streamlit_chat.py --server.port 8512 --server.headless=true --browser.gatherUsageStats=false\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  }
+}
