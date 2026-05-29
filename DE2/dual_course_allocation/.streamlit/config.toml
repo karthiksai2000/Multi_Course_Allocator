@@ -3,6 +3,9 @@ gatherUsageStats = false
 
 [server]
 headless = true
+baseUrlPath = "/courseallocation/py/dual"
+enableCORS = false
+enableXsrfProtection = false
 
 [theme]
 base = "light"

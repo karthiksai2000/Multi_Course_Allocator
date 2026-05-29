@@ -6,10 +6,10 @@ const LIFESKILL_API_URL =
   import.meta.env.VITE_LIFESKILL_API || "http://localhost:8000";
 
 const DEPT_APP_URL =
-  import.meta.env.VITE_DEPT_ALLOC_URL || "http://localhost:8501";
+  import.meta.env.VITE_DEPT_ALLOC_URL || "http://localhost:8501/courseallocation/py/single";
 
 const DUAL_APP_URL =
-  import.meta.env.VITE_DUAL_ALLOC_URL || "http://localhost:8502";
+  import.meta.env.VITE_DUAL_ALLOC_URL || "http://localhost:8502/courseallocation/py/dual";
 
 
 

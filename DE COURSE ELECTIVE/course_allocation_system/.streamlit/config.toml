@@ -3,6 +3,9 @@ gatherUsageStats = false
 
 [server]
 headless = true
+baseUrlPath = "/courseallocation/py/single"
+enableCORS = false
+enableXsrfProtection = false
 
 [theme]
 base = "light"
